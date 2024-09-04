@@ -43,6 +43,17 @@ aws configure
 
 ![image](https://github.com/user-attachments/assets/0e645e40-89d6-4781-9922-3af5c244f114)
 
+## RDS
+1- create RDS for mysql in free tier
+2- sql configuration and creating database
+```bash
+mysql -h database-1.cl4suwy60mbo.us-east-1.rds.amazonaws.com -u admin -p
+```
+3- clone sql file in db-sql folder of backend
+```bash
+mysql -h database-1.cl4suwy60mbo.us-east-1.rds.amazonaws.com -u admin -p devops < users.sql
+```
+
 ## EC2
 
 1- Create Instance and connect with it, make sure security groups are configured correctly for 9001, 5713
@@ -62,5 +73,21 @@ sudo apt-get update
 sudo apt-get install nodejs -y
 sudo apt-get install nginx
 ```
+4- set env, Build and upload dist to s3
+```bash
+nano .env
+http://server-ip:9001
+npm run build
+aws s3 sync ./dist s3://blog-ammar --region us-east-1
+```
+
+4- update sql connection in index.js file of backend
+
+![image](https://github.com/user-attachments/assets/44516397-5f4a-4f37-a88a-939522aff44f)
+
+5- Finally Running
+
+![image](https://github.com/user-attachments/assets/d1378763-776b-41ea-8199-4cdfb35f52c4)
+
 
  
