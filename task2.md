@@ -2,6 +2,7 @@
 
 ## RDS
 1- create RDS for mysql in free tier
+
 2- sql configuration and creating database
 ```bash
 mysql -h database-1.cl4suwy60mbo.us-east-1.rds.amazonaws.com -u admin -p
@@ -14,6 +15,7 @@ mysql -h database-1.cl4suwy60mbo.us-east-1.rds.amazonaws.com -u admin -p devops 
 ## EC2
 
 1- Create Instance and connect with it, make sure security groups are configured correctly for 9001, 5713
+
 2- clone repo
 ```bash
 git clone https://github.com/MAmmarRaza/React-NodeAPI-MySQL.git
