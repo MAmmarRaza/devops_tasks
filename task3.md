@@ -98,6 +98,9 @@ pm2 start index.js
 ```
 
 6- After connecting with database
-![image](https://github.com/user-attachments/assets/68f1666d-79a2-467a-986f-6fb92c9121dc)
 ![image](https://github.com/user-attachments/assets/e040dc9a-8869-4ead-b86b-9f81a4c1a816)
+
+7- I did change in create button and when i commit it, it gets deployed too after running jobs
+
+![image](https://github.com/user-attachments/assets/5d11385c-350c-4c8f-bc00-cc0f0e958d34)
 
