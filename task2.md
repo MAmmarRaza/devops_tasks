@@ -63,7 +63,11 @@ aws s3 sync ./dist s3://blog-ammar --region us-east-1
 ```
 2- Open terminal and configure
 ```bash
-sudo apt-get install awscli
+sudo apt install unzip curl -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 aws configure
 ```
 3- Build frontend and create dist folder
