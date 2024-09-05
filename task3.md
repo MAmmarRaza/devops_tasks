@@ -22,6 +22,11 @@ sudo apt-get install nodejs -y
 
 ![image](https://github.com/user-attachments/assets/f8e17423-74c4-4eaf-8f26-c530562fb58c)
 
+```bash
+sudo ./svc.sh install
+sudo ./svc.sh start
+```
+
 3- GitHub Repository Settings:
 - You define these secrets in your GitHub repository settings under Settings > Secrets and variables > Actions.
 - In that section, you can add secrets by providing a name and value. For example:
