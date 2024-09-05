@@ -12,7 +12,7 @@ sudo apt-get update
 sudo apt-get install nodejs -y
 ```
 
-## configuring Github Actions in /var/www
+## configuring Github Actions
 
 1- Go to setting -> actions -> runners -> new self-hosted-runner
 
