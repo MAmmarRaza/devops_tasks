@@ -37,31 +37,31 @@ sudo ./svc.sh start
 ```bash
 name: s3-depl
 
-# Controls when the Workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: 
       - main
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    runs-on: self-hosted
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
+          
+      - name: Backend package install and restart
+        run: |
+          cd backend
+          pwd
+          npm install
+          pm2 restart index
+          cd ..
           
       - name: Build React App
         run: |
@@ -84,15 +84,20 @@ jobs:
         
       - name: Deploy app build to S3 bucket
         run: |
-          aws s3 sync /home/runner/work/React-NodeAPI-MySQL/React-NodeAPI-MySQL/frontend/dist/ s3://myweb.com.cm --delete
+          aws s3 sync /home/ubuntu/actions-runner/_work/React-NodeAPI-MySQL/React-NodeAPI-MySQL/frontend/dist s3://myweb.com.cm --delete
 ```
 4- Create bucket and make sure that you put the same name in last command of .yaml file
 
-5- Commit in repo and push and finally running
+5- Commit in repo and push
 
-![image](https://github.com/user-attachments/assets/68f1666d-79a2-467a-986f-6fb92c9121dc)
+6- you may face error for backend or pm2 error, its solution is you will see _work folder in actions-runner folder
+```bash
+cd _work/React-NodeAPI-MySQL/React-NodeAPI-MySQL/backend
+npm i
+pm2 start index.js
+```
 
 6- After connecting with database
-
+![image](https://github.com/user-attachments/assets/68f1666d-79a2-467a-986f-6fb92c9121dc)
 ![image](https://github.com/user-attachments/assets/e040dc9a-8869-4ead-b86b-9f81a4c1a816)
 
