@@ -67,9 +67,23 @@ systemctl restart httpd
 
 ![screencapture-us-east-1-console-aws-amazon-ec2-home-2024-09-05-16_59_52](https://github.com/user-attachments/assets/8603f3b7-d334-49dc-af38-c5287d7a47ea)
 
+## Testing load balancer copy dns name from load balancer and paste then try to refresh browser
+![image](https://github.com/user-attachments/assets/2b78ae41-e2db-4adc-a18f-3b2df7e99cb8)
+
+![image](https://github.com/user-attachments/assets/b5f4ebfb-fd03-4e94-9fad-c07932144a33)
+
+## Testing auto scaling
+![image](https://github.com/user-attachments/assets/a8059c73-6f1b-40c3-b635-e904015a9ac5)
+
+## Alarm on high load
+![image](https://github.com/user-attachments/assets/214f0bde-5ecf-49a1-ac70-14b4f0e098a5)
+
+
+
+
 ## Check health status of target groups
 ![image](https://github.com/user-attachments/assets/be2ee9de-8ed5-41dc-b139-7543f978a055)
 
-
-
+## troubleshooting if unhealthy
+1- give security groups to anywhere http
 
