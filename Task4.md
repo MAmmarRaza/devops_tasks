@@ -1,4 +1,10 @@
 # Load Balancer Task
+- Create Load Balancer
+- To create load balancer required:
+  - Create an instance
+  - Create VPC
+  - Target Group
+  - Security Group
 
 ## Create VPC
 ![createVPC](https://github.com/user-attachments/assets/31a7f848-e0a0-48d8-8653-ff6e407e1fa9)
