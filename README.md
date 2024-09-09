@@ -7,3 +7,6 @@
 
 ## Task 3:
 - CI / CD using github actions runner , frontend on s3 and backend on server
+
+## Task 4:
+- Autoscaling and load balancer practical view
