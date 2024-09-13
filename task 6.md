@@ -35,3 +35,8 @@
 
 
 ![screencapture-us-east-1-console-aws-amazon-ecs-v2-clusters-raza-ecs-create-service-2024-09-14-01_17_46](https://github.com/user-attachments/assets/69c0536f-473c-4357-a4da-b508ad412490)
+
+## I have attached load balancer so copy dns with port 4173 and paste in browser then boom!!!
+
+![image](https://github.com/user-attachments/assets/33018e22-44d7-49af-865b-c84e4df441ea)
+
