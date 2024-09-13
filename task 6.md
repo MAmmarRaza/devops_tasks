@@ -31,4 +31,7 @@
 
 ![image](https://github.com/user-attachments/assets/5bc2ee7c-1bd3-493d-94b4-73c957b2f5bf)
 
+## Service running which is continue to run which is different and best method to use containers
 
+
+![screencapture-us-east-1-console-aws-amazon-ecs-v2-clusters-raza-ecs-create-service-2024-09-14-01_17_46](https://github.com/user-attachments/assets/69c0536f-473c-4357-a4da-b508ad412490)
