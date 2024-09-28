@@ -82,3 +82,8 @@ kubectl get  svc -o wide
 kubectl describe service service-name
 minikube service mongo-express-service
 ```
+
+## Switch between minikube and ekctl cluster
+
+kubectl config get-contexts
+
