@@ -81,12 +81,9 @@ cd /home/ubuntu/React-NodeAPI-MySQL/backend
 sudo npm install -g pm2
 
 # Restore PM2 processes if saved earlier
-pm2 resurrect || pm2 start index.js --name "backend-app"
+pm2 start index.js --name "backend-app"
 
 # Save the current PM2 process list (optional)
 pm2 save
-
-# Ensure PM2 starts on reboot
-pm2 startup | sudo bash
 ```
 
