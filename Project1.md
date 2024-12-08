@@ -68,4 +68,25 @@ aws s3 sync ./dist s3://blog-ammar --region us-east-1
 8- Enable Static Website Hosting
 9- Start backend on EC2 
 
+## Auto Scaling Launch template user data script
+```
+#!/bin/bash
+# Update system packages
+sudo apt-get update -y
+
+# Navigate to the application directory
+cd /home/ubuntu/React-NodeAPI-MySQL/backend
+
+# Ensure PM2 is installed globally
+sudo npm install -g pm2
+
+# Restore PM2 processes if saved earlier
+pm2 resurrect || pm2 start index.js --name "backend-app"
+
+# Save the current PM2 process list (optional)
+pm2 save
+
+# Ensure PM2 starts on reboot
+pm2 startup | sudo bash
+```
 
