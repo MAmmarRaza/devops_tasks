@@ -51,7 +51,7 @@ cloudWatch:
 
 6- Run these commands
 ```
-eksctl update addon --name vpc-cni --cluster web-quickstart
+eksctl update addon --name vpc-cni --cluster ammarcluster
 
 eksctl utils migrate-to-pod-identity --cluster web-quickstart
 
