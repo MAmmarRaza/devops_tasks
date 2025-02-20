@@ -66,7 +66,19 @@ helm repo update
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller
 ```
+7- Add argo cd 
+```
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+```
 
+```
+helm install argo-cd argo/argo-cd -n argocd --create-namespace
+```
+
+```
+kubectl get pods -n argocd
+```
 7- Apply ingress file ``kubectl apply -f argocd-ingress.yaml``
 ```
 apiVersion: networking.k8s.io/v1
