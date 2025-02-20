@@ -70,10 +70,12 @@ helm repo update
 ```
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
+helm install argo-cd argo/argo-cd -n argocd --create-namespace
+
 ```
 
 ```
-helm install argo-cd argo/argo-cd -n argocd --create-namespace
+kubectl patch svc argo-cd-argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 ```
 
 ```
