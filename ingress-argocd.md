@@ -118,6 +118,10 @@ kubectl rollout restart deployment argocd-server -n argocd
 
 11- Remove cache and cookies and try to run https://cloud.maxes.live
 
+12- by default username is ``admin`` while password can be get through this command
+```
+kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode
+```
 
 
 
