@@ -81,7 +81,7 @@ kubectl patch svc argo-cd-argocd-server -n argocd -p '{"spec": {"type": "NodePor
 ```
 kubectl get pods -n argocd
 ```
-7- Apply ingress file ``kubectl apply -f argocd-ingress.yaml``
+8- Apply ingress file ``kubectl apply -f argocd-ingress.yaml``
 ```
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -109,14 +109,14 @@ spec:
                   number: 80
 ```
 
-8- Check ingress
+9- Check ingress
 ```
 kubectl get ingress argocd-ingress -n argocd
 ```
-9- Attach alb to domain 
+10- Attach alb to domain 
 ![image](https://github.com/user-attachments/assets/1c16352f-7499-43da-ba12-8d268b7a4d08)
 
-10- if still not run these commands
+11- if still not run these commands
 
 ```
 kubectl get configmap argocd-cmd-params-cm -n argocd -o yaml
@@ -130,9 +130,9 @@ kubectl patch configmap argocd-cmd-params-cm -n argocd --type merge -p '{"data":
 kubectl rollout restart deployment argocd-server -n argocd
 ```
 
-11- Remove cache and cookies and try to run https://cloud.maxes.live
+12- Remove cache and cookies and try to run https://cloud.maxes.live
 
-12- by default username is ``admin`` while password can be get through this command
+13- by default username is ``admin`` while password can be get through this command
 ```
 kubectl get secret -n argocd argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode
 ```
