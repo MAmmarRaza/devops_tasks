@@ -9,7 +9,6 @@ Note: As i have domain on cloudflare
 3- sign in with credentials on cloudflare
 ```
 ammarraza494@gmail.com
-Devops786@
 ```
 4- Go to DNS setting and add route 53 nameservers for sub domain cloud
 
