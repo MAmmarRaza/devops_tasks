@@ -18,4 +18,20 @@ sudo apt update
 sudo apt install php8.2 php8.2-cli -y
 sudo apt install php8.2-fpm -y
 sudo apt install php8.2-{mysql,curl,gd,mbstring,xml,zip,opcache,intl,bcmath} -y
+
+sudo systemctl start php8.2-fpm
+sudo systemctl enable php8.2-fpm
+sudo systemctl status php8.2-fpm
+
+```
+
+## Insatalling composer
+```
+# 1. Download the installer script
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+
+# 2. Run the installer script using PHP
+php composer-setup.php
+
+sudo mv composer.phar /usr/local/bin/composer
 ```
